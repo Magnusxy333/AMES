@@ -3,55 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>AMES - Perfil</title>
+    <!-- Lembre-se de colocar o seu CSS por último! -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/profile.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body> 
     
-    <nav class="navbar navbar-expand navbar-dark bg-primary"> 
+    <!-- NAVBAR (MANTIDA EXATAMENTE IGUAL) -->
+    <nav class="navbar navbar-expand navbar-dark bg-primary custom-navbar"> 
       <div class="container"> 
-        
         <ul class="navbar-nav w-100 justify-content-evenly text-center"> 
-          
           <li class="nav-item">
-            <a class="nav-link text-white" href="home.html">
-              <i class="fas fa-home me-2"></i>Home
-            </a>
+            <a class="nav-link text-white" href="home.html"><i class="fas fa-home me-2"></i>Home</a>
           </li>
-          
           <li class="nav-item">
-            <a class="nav-link text-white" href="activities.html">
-              <i class="fas fa-tasks me-2"></i>Atividades
-            </a>
+            <a class="nav-link text-white" href="activities.html"><i class="fas fa-tasks me-2"></i>Atividades</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link text-white" href="location.html">
-              <i class="fas fa-map-marker-alt me-2"></i>Localização
-            </a>
+            <a class="nav-link text-white" href="location.html"><i class="fas fa-map-marker-alt me-2"></i>Localização</a>
           </li>
-          
           <li class="nav-item">
-            <a class="nav-link text-white" href="notifications.html">
-              <i class="fas fa-bell me-2"></i>Lembretes
-            </a>
+            <a class="nav-link text-white" href="notifications.html"><i class="fas fa-bell me-2"></i>Lembretes</a>
           </li>
-          
           <li class="nav-item">
-            <a class="nav-link text-white" href="profile.html">
-              <i class="fas fa-user me-2"></i>Perfil
-            </a>
+            <a class="nav-link text-white fw-bold" href="profile.html"><i class="fas fa-user me-2"></i>Perfil</a>
           </li>
-          
         </ul> 
-        
       </div> 
     </nav>
 
-    <p>Perfil</p>
+    <!-- CONTEÚDO PRINCIPAL DO PERFIL -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            
+            <!-- COLUNA ESQUERDA: FOTO E RESUMO -->
+            <div class="col-lg-4 mb-4">
+                <div class="card profile-card border-0 shadow-sm text-center p-4">
+                    <div class="profile-img-container mx-auto mb-3">
+                        <!-- Imagem de placeholder padrão. Você pode trocar o src pela foto do banco de dados -->
+                        <img src="https://ui-avatars.com/api/?name=Usuario+AMES&background=0EC5E1&color=fff&size=150" alt="Foto de Perfil" class="rounded-circle img-fluid profile-img">
+                        <button class="btn btn-sm btn-light change-photo-btn" title="Alterar Foto">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <h4 class="mb-1">Nome do Usuário</h4>
+                    <p class="text-muted mb-3">Membro do AMES</p>
+                    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary"><i class="fas fa-key me-2"></i>Alterar Senha</button>
+                        <button class="btn btn-danger"><i class="fas fa-sign-out-alt me-2"></i>Sair da Conta</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUNA DIREITA: FORMULÁRIO DE DADOS -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4">
+                    <h4 class="mb-4 pb-2 border-bottom">Meus Dados</h4>
+                    
+                    <form>
+                        <div class="row">
+                            <!-- Campo Nome Completo -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Nome Completo</label>
+                                <input type="text" class="form-control bg-light" value="Nome do Usuário">
+                            </div>
+                            
+                            <!-- Campo Email -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">E-mail</label>
+                                <input type="email" class="form-control bg-light" value="usuario@email.com">
+                            </div>
+
+                            <!-- Campo Telefone -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Telefone de Contato</label>
+                                <input type="text" class="form-control bg-light" value="(11) 99999-9999">
+                            </div>
+
+                            <!-- Campo Data de Nascimento -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Data de Nascimento</label>
+                                <input type="date" class="form-control bg-light">
+                            </div>
+
+                            <!-- Campo Endereço (Útil se houver cuidadores/entregas de medicamentos) -->
+                            <div class="col-12 mb-4">
+                                <label class="form-label fw-bold">Endereço Principal</label>
+                                <input type="text" class="form-control bg-light" value="Rua das Flores, 123">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary px-4"><i class="fas fa-save me-2"></i>Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
